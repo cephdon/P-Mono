@@ -1,0 +1,12 @@
+﻿<Properties StartupItem="CParser.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x64" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="../../../../P/Src/Parsers/CParser/CParser.cs">
+    <Files>
+      <File FileName="../../../../P/Src/Parsers/CParser/CParser.cs" Line="6" Column="17" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

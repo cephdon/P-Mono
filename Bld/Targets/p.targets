@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <UnifiedPlatform>$(Platform)</UnifiedPlatform>
+        <!-- C++ projects use "Win32" for "x86" platform and .NET projects use 'x86' -->
+        <!-- So this new property unifies that difference and moves everything to 'x86' -->
+        <UnifiedPlatform Condition="'$(Platform)'=='Win32'">x86</UnifiedPlatform>
+        <DropFolder>$(MSBuildThisFileDirectory)..\Drops\$(Configuration)\$(UnifiedPlatform)</DropFolder>
+        <CleanDependsOn>$(CleanDependsOn);CleanSdkHeaders;CleanClientFiles;CleanCompileP</CleanDependsOn>
+    </PropertyGroup>
+    
+    <Target Name="CompileP" Inputs="@(PCompile)" Outputs="%(FileName).c;%(FileName).h;stubs.c" BeforeTargets="BeforeBuildGenerateSources">
+        <Message Importance="high" Text="########## compiling p files: @(PCompile) ##################" />
+        <Exec Command="$(DropFolder)\Binaries\pc.exe @(PCompile->'%(FullPath)')" />
+        <ItemGroup>
+            <FileWrites Include="@(PCompile->'%(FullPath)\%(FileName).c')" />
+            <FileWrites Include="@(PCompile->'%(FullPath)\%(FileName).h')" />
+            <FileWrites Include="$(MSBuildThisFileDirectory)\stubs.c" />
+        </ItemGroup>
+    </Target>
+    
+    <Target Name="CleanCompileP" Condition="'@(PCompile)' != ''" >
+       <PropertyGroup>
+          <PFullPath>@(PCompile->'%(FullPath)')</PFullPath>
+          <PDirectory>$([System.IO.Path]::GetDirectoryName($(PFullPath)))</PDirectory>
+       </PropertyGroup>
+        <Delete Files="@(PCompile->'$(PDirectory)\%(FileName).c')"/>
+        <Delete Files="@(PCompile->'$(PDirectory)\%(FileName).h')"/>
+        <Delete Files="$(MSBuildThisFileDirectory)\stubs.c"/>
+    </Target>
+
+    <Target Name="CopySdkHeaders" Inputs="@(ClInclude)"  Outputs="$(DropFolder)\Headers\%(Filename)" BeforeTargets="PrepareForBuild">    
+        <CreateItem Include="@(ClInclude)" Condition="'%(ClInclude.CopyToHeaders)'=='True'" >
+            <Output TaskParameter="Include" ItemName="SdkHeaders"/>
+        </CreateItem>
+        <Copy SourceFiles="@(SdkHeaders)" DestinationFolder="$(DropFolder)\Headers" />
+    </Target>
+
+    <Target Name="CleanSdkHeaders">
+        <CreateItem Include="@(ClInclude)" Condition="'%(ClInclude.CopyToHeaders)'=='True'" >
+            <Output TaskParameter="Include" ItemName="SdkHeaders"/>
+        </CreateItem>
+        <Delete Files="@(SdkHeaders->'$(DropFolder)\Headers\%(Filename)%(Extension)')"/>
+    </Target>
+
+    <Target Name="CopyClientFiles" Inputs="@(ClientFile)"  Outputs="$(DropFolder)\ClientFiles\%(Filename)" BeforeTargets="PrepareForBuild">
+        <Copy SourceFiles="@(ClientFile)" DestinationFolder="$(DropFolder)\ClientFiles" />
+    </Target>
+
+    <Target Name="CleanClientFiles">
+        <Delete Files="@(ClientFile->'$(DropFolder)\ClientFiles\%(Filename)%(Extension)')" />
+    </Target>
+</Project>

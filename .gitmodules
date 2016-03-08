@@ -1,0 +1,3 @@
+[submodule "Dependencies/P"]
+	path = Dependencies/P
+	url = git@github.com:p-org/P.git
