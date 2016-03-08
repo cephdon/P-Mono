@@ -74,10 +74,10 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-      <ProjectReference Include="..\Compiler\Compiler.csproj">
-          <Project>{ed76217f-2452-4a35-90f6-6eb6ccf2d882}</Project>
-          <Name>Compiler</Name>
-      </ProjectReference>
+    <ProjectReference Include="..\Compiler\Compiler.csproj">
+      <Project>{ED76217F-2452-4A35-90F6-6EB6CCF2D882}</Project>
+      <Name>Compiler</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

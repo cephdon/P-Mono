@@ -84,4 +84,10 @@
       <Link>Properties\AssemblyInfo.cs</Link>
     </Compile>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Compiler\Compiler.csproj">
+      <Project>{ED76217F-2452-4A35-90F6-6EB6CCF2D882}</Project>
+      <Name>Compiler</Name>
+    </ProjectReference>
+  </ItemGroup>
 </Project>
