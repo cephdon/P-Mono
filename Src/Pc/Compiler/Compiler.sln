@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Compiler", "Compiler.csproj", "{ED76217F-2452-4A35-90F6-6EB6CCF2D882}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ED76217F-2452-4A35-90F6-6EB6CCF2D882}.Debug|x64.ActiveCfg = Debug|x64
+		{ED76217F-2452-4A35-90F6-6EB6CCF2D882}.Debug|x64.Build.0 = Debug|x64
+		{ED76217F-2452-4A35-90F6-6EB6CCF2D882}.Debug|x86.ActiveCfg = Debug|x86
+		{ED76217F-2452-4A35-90F6-6EB6CCF2D882}.Debug|x86.Build.0 = Debug|x86
+		{ED76217F-2452-4A35-90F6-6EB6CCF2D882}.Release|x64.ActiveCfg = Release|x64
+		{ED76217F-2452-4A35-90F6-6EB6CCF2D882}.Release|x64.Build.0 = Release|x64
+		{ED76217F-2452-4A35-90F6-6EB6CCF2D882}.Release|x86.ActiveCfg = Release|x86
+		{ED76217F-2452-4A35-90F6-6EB6CCF2D882}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+EndGlobal

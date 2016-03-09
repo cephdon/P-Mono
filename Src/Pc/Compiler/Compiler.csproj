@@ -1,0 +1,294 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), p-mono.props))\p-mono.props" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{ED76217F-2452-4A35-90F6-6EB6CCF2D882}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Pc</RootNamespace>
+    <AssemblyName>Compiler</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <CodeContractsAssemblyMode>1</CodeContractsAssemblyMode>
+    <GPToolsPath>$(PExtFolder)\Formula\x86\</GPToolsPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>$(DropFolder)\Binaries</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+    <CodeContractsEnableRuntimeChecking>True</CodeContractsEnableRuntimeChecking>
+    <CodeContractsRuntimeOnlyPublicSurface>False</CodeContractsRuntimeOnlyPublicSurface>
+    <CodeContractsRuntimeThrowOnFailure>False</CodeContractsRuntimeThrowOnFailure>
+    <CodeContractsRuntimeCallSiteRequires>False</CodeContractsRuntimeCallSiteRequires>
+    <CodeContractsRuntimeSkipQuantifiers>False</CodeContractsRuntimeSkipQuantifiers>
+    <CodeContractsRunCodeAnalysis>False</CodeContractsRunCodeAnalysis>
+    <CodeContractsNonNullObligations>True</CodeContractsNonNullObligations>
+    <CodeContractsBoundsObligations>True</CodeContractsBoundsObligations>
+    <CodeContractsArithmeticObligations>False</CodeContractsArithmeticObligations>
+    <CodeContractsEnumObligations>False</CodeContractsEnumObligations>
+    <CodeContractsRedundantAssumptions>False</CodeContractsRedundantAssumptions>
+    <CodeContractsMissingPublicRequiresAsWarnings>True</CodeContractsMissingPublicRequiresAsWarnings>
+    <CodeContractsInferRequires>True</CodeContractsInferRequires>
+    <CodeContractsInferEnsures>False</CodeContractsInferEnsures>
+    <CodeContractsInferObjectInvariants>False</CodeContractsInferObjectInvariants>
+    <CodeContractsSuggestAssumptions>False</CodeContractsSuggestAssumptions>
+    <CodeContractsSuggestRequires>True</CodeContractsSuggestRequires>
+    <CodeContractsSuggestObjectInvariants>False</CodeContractsSuggestObjectInvariants>
+    <CodeContractsRunInBackground>True</CodeContractsRunInBackground>
+    <CodeContractsShowSquigglies>True</CodeContractsShowSquigglies>
+    <CodeContractsUseBaseLine>False</CodeContractsUseBaseLine>
+    <CodeContractsEmitXMLDocs>False</CodeContractsEmitXMLDocs>
+    <CodeContractsCustomRewriterAssembly>
+    </CodeContractsCustomRewriterAssembly>
+    <CodeContractsCustomRewriterClass>
+    </CodeContractsCustomRewriterClass>
+    <CodeContractsLibPaths>
+    </CodeContractsLibPaths>
+    <CodeContractsExtraRewriteOptions>
+    </CodeContractsExtraRewriteOptions>
+    <CodeContractsExtraAnalysisOptions>
+    </CodeContractsExtraAnalysisOptions>
+    <CodeContractsSQLServerOption>
+    </CodeContractsSQLServerOption>
+    <CodeContractsBaseLineFile>
+    </CodeContractsBaseLineFile>
+    <CodeContractsCacheAnalysisResults>True</CodeContractsCacheAnalysisResults>
+    <CodeContractsFailBuildOnWarnings>False</CodeContractsFailBuildOnWarnings>
+    <CodeContractsRuntimeCheckingLevel>Full</CodeContractsRuntimeCheckingLevel>
+    <CodeContractsReferenceAssembly>%28none%29</CodeContractsReferenceAssembly>
+    <CodeContractsAnalysisWarningLevel>0</CodeContractsAnalysisWarningLevel>
+    <WarningLevel>4</WarningLevel>
+    <Optimize>false</Optimize>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>$(DropFolder)\Binaries</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>$(DropFolder)\Binaries</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+    <CodeContractsEnableRuntimeChecking>True</CodeContractsEnableRuntimeChecking>
+    <CodeContractsRuntimeOnlyPublicSurface>False</CodeContractsRuntimeOnlyPublicSurface>
+    <CodeContractsRuntimeThrowOnFailure>False</CodeContractsRuntimeThrowOnFailure>
+    <CodeContractsRuntimeCallSiteRequires>False</CodeContractsRuntimeCallSiteRequires>
+    <CodeContractsRuntimeSkipQuantifiers>False</CodeContractsRuntimeSkipQuantifiers>
+    <CodeContractsRunCodeAnalysis>False</CodeContractsRunCodeAnalysis>
+    <CodeContractsNonNullObligations>True</CodeContractsNonNullObligations>
+    <CodeContractsBoundsObligations>True</CodeContractsBoundsObligations>
+    <CodeContractsArithmeticObligations>False</CodeContractsArithmeticObligations>
+    <CodeContractsEnumObligations>False</CodeContractsEnumObligations>
+    <CodeContractsRedundantAssumptions>False</CodeContractsRedundantAssumptions>
+    <CodeContractsMissingPublicRequiresAsWarnings>True</CodeContractsMissingPublicRequiresAsWarnings>
+    <CodeContractsInferRequires>True</CodeContractsInferRequires>
+    <CodeContractsInferEnsures>False</CodeContractsInferEnsures>
+    <CodeContractsInferObjectInvariants>False</CodeContractsInferObjectInvariants>
+    <CodeContractsSuggestAssumptions>False</CodeContractsSuggestAssumptions>
+    <CodeContractsSuggestRequires>True</CodeContractsSuggestRequires>
+    <CodeContractsSuggestObjectInvariants>False</CodeContractsSuggestObjectInvariants>
+    <CodeContractsRunInBackground>True</CodeContractsRunInBackground>
+    <CodeContractsShowSquigglies>True</CodeContractsShowSquigglies>
+    <CodeContractsUseBaseLine>False</CodeContractsUseBaseLine>
+    <CodeContractsEmitXMLDocs>False</CodeContractsEmitXMLDocs>
+    <CodeContractsCustomRewriterAssembly>
+    </CodeContractsCustomRewriterAssembly>
+    <CodeContractsCustomRewriterClass>
+    </CodeContractsCustomRewriterClass>
+    <CodeContractsLibPaths>
+    </CodeContractsLibPaths>
+    <CodeContractsExtraRewriteOptions>
+    </CodeContractsExtraRewriteOptions>
+    <CodeContractsExtraAnalysisOptions>
+    </CodeContractsExtraAnalysisOptions>
+    <CodeContractsSQLServerOption>
+    </CodeContractsSQLServerOption>
+    <CodeContractsBaseLineFile>
+    </CodeContractsBaseLineFile>
+    <CodeContractsCacheAnalysisResults>True</CodeContractsCacheAnalysisResults>
+    <CodeContractsFailBuildOnWarnings>False</CodeContractsFailBuildOnWarnings>
+    <CodeContractsRuntimeCheckingLevel>Full</CodeContractsRuntimeCheckingLevel>
+    <CodeContractsReferenceAssembly>%28none%29</CodeContractsReferenceAssembly>
+    <CodeContractsAnalysisWarningLevel>0</CodeContractsAnalysisWarningLevel>
+    <WarningLevel>4</WarningLevel>
+    <Optimize>false</Optimize>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>$(DropFolder)\Binaries</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Core">
+      <HintPath>..\..\..\Dependencies\P\Ext\Formula\x86\Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\..\Dependencies\P\Src\Pc\Compiler\App.config">
+      <Link>App.config</Link>
+    </None>
+    <EmbeddedResource Include="..\..\..\Dependencies\P\Src\Pc\Compiler\Domains\C.4ml">
+      <Link>Domains\C.4ml</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\..\..\Dependencies\P\Src\Pc\Compiler\Domains\P.4ml">
+      <Link>Domains\P.4ml</Link>
+      <Generator>FormulaCodeGenerator</Generator>
+      <CustomToolNamespace>Microsoft.Pc.Domains</CustomToolNamespace>
+      <LastGenOutput>P.4ml.g.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\..\..\Dependencies\P\Src\Pc\Compiler\Domains\Zing.4ml">
+      <Link>Domains\Zing.4ml</Link>
+    </EmbeddedResource>
+    <MPLexCompile Include="..\..\..\Dependencies\P\Src\Pc\Compiler\Parser\lexer.lex">
+      <Link>Parser\lexer.lex</Link>
+    </MPLexCompile>
+    <MPPGCompile Include="..\..\..\Dependencies\P\Src\Pc\Compiler\Parser\parser.y">
+      <Link>Parser\parser.y</Link>
+    </MPPGCompile>
+    <EmbeddedResource Include="..\..\..\Dependencies\P\Src\Pc\Compiler\Transforms\P2CProgram.4ml">
+      <Link>Transforms\P2CProgram.4ml</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\..\..\Dependencies\P\Src\Pc\Compiler\Transforms\PWithInferredTypes.4ml">
+      <Link>Transforms\PWithInferredTypes.4ml</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\..\..\Dependencies\P\Src\Pc\Compiler\Zing\Minimal.zing">
+      <Link>Zing\Minimal.zing</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\..\..\Dependencies\P\Src\Pc\Compiler\Zing\Prt.zing">
+      <Link>Zing\Prt.zing</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\..\..\Dependencies\P\Src\Pc\Compiler\Zing\PrtTypes.zing">
+      <Link>Zing\PrtTypes.zing</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\..\..\Dependencies\P\Src\Pc\Compiler\Zing\PrtValues.zing">
+      <Link>Zing\PrtValues.zing</Link>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\..\Dependencies\P\Src\Pc\Compiler\CommandLineOptions.cs">
+      <Link>CommandLineOptions.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Dependencies\P\Src\Pc\Compiler\Compiler.cs">
+      <Link>Compiler.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Dependencies\P\Src\Pc\Compiler\Domains\P.4ml.g.cs">
+      <Link>Domains\P.4ml.g.cs</Link>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>P.4ml</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\..\Dependencies\P\Src\Pc\Compiler\PData.cs">
+      <Link>PData.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Dependencies\P\Src\Pc\Compiler\PProgram.cs">
+      <Link>PProgram.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Dependencies\P\Src\Pc\Compiler\PToZing.cs">
+      <Link>PToZing.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Dependencies\P\Src\Pc\Compiler\ZingData.cs">
+      <Link>ZingData.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Dependencies\P\Src\Pc\Compiler\Parser\Parser.cs">
+      <Link>Parser\Parser.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Dependencies\P\Src\Pc\Compiler\Parser\ShiftReduceParserCode.cs">
+      <Link>Parser\ShiftReduceParserCode.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Dependencies\P\Src\Pc\Compiler\Properties\AssemblyInfo.cs">
+      <Link>Properties\AssemblyInfo.cs</Link>
+    </Compile>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <!--Make sure that the lexer runs before the C# compiler-->
+    <CoreCompileDependsOn>$(CoreCompileDependsOn);GenerateCodeFromLex</CoreCompileDependsOn>
+  </PropertyGroup>
+  <Target Name="GenerateCodeFromLex" Condition="'$(BuildingProject)'!='false'" Inputs="@(MPLexCompile);$(LexFrameFile)" Outputs="@(MPLexCompile-&gt;'$(IntermediateOutputPath)%(FileName).g.cs')" DependsOnTargets="$(GenerateCodeFromLexDependsOn)">
+    <!--Run the command line tool that generates the cs files.-->
+    <Exec Command="mono $(GPToolsPath)\gplex45.exe /babel /unicode /out:@(MPLexCompile-&gt;'$(IntermediateOutputPath)%(FileName).g.cs') @(MPLexCompile)" />
+    <!--Add the generated files to the list of the files to compile.-->
+    <CreateItem Include="@(MPLexCompile-&gt;'$(IntermediateOutputPath)%(FileName).g.cs')">
+      <Output TaskParameter="Include" ItemName="Compile" />
+      <Output TaskParameter="Include" ItemName="FileWrites" />
+    </CreateItem>
+  </Target>
+  <!--
+    =======================================================================================================
+                                      Generate parser code from Y files
+    =======================================================================================================
+  -->
+  <PropertyGroup>
+    <GenerateParserCodeFromGrammarDependsOn>$(GenerateParserCodeFromGrammarDependsOn)</GenerateParserCodeFromGrammarDependsOn>
+    <CoreCompileDependsOn>$(CoreCompileDependsOn);GenerateParserCodeFromGrammar</CoreCompileDependsOn>
+  </PropertyGroup>
+  <Target Name="GenerateParserCodeFromGrammar" Condition="'$(BuildingProject)'!='false'" Inputs="@(MPPGCompile)" Outputs="@(MPPGCompile-&gt;'$(IntermediateOutputPath)%(FileName).g.cs')" DependsOnTargets="$(GenerateParserCodeFromGrammarDependsOn)">
+    <!--Run the command line tool that generates the cs files.-->
+    <Exec Command="mono $(GPToolsPath)\gppg45.exe -babel -gplex -report -verbose -conflicts @(MPPGCompile) &gt; @(MPPGCompile-&gt;'$(IntermediateOutputPath)%(FileName).g.cs')" />
+    <!--Add the generated files to the list of the files to compile.-->
+    <CreateItem Include="@(MPPGCompile-&gt;'$(IntermediateOutputPath)%(FileName).g.cs')">
+      <Output TaskParameter="Include" ItemName="Compile" />
+      <Output TaskParameter="Include" ItemName="FileWrites" />
+    </CreateItem>
+  </Target>
+  <!-- Start Formula code generator MSBuild integration -->
+  <UsingTask TaskName="FormulaCodeGeneratorTask.FormulaCodeGeneratorTask" AssemblyFile="$(ExtFolder)\Formula\x86\FormulaCodeGeneratorTask.dll" />
+  <Target Name="BeforeBuild">
+    <ItemGroup>
+      <FormulaGenFiles Include="@(EmbeddedResource-&gt;'%(FullPath)')" Condition="'%(EmbeddedResource.Generator)' == 'FormulaCodeGenerator'" />
+    </ItemGroup>
+    <FormulaCodeGeneratorTask GeneratorInputs="@(FormulaGenFiles-&gt;'%(FullPath),%(CustomToolNamespace),%(IsThreadSafe),%(IsObjectGraph),%(IsNewOnly)')" DefaultNamespace="$(RootNamespace)" />
+  </Target>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Parsers\CParser\CParser.csproj">
+      <Project>{55AFEA71-DA6D-4258-9193-29942EBBBE48}</Project>
+      <Name>CParser</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Parsers\ZingParser\ZingParser.csproj">
+      <Project>{09A73016-0395-4014-8F26-0DD25ED81D12}</Project>
+      <Name>ZingParser</Name>
+    </ProjectReference>
+  </ItemGroup>
+</Project>
