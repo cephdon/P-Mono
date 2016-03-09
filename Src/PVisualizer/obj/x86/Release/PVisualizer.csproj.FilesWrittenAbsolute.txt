@@ -1,6 +1,0 @@
-/Users/jianqiaoyang/Desktop/p-org/P-Mono/Src/PVisualizer/obj/x86/Release/.NETFramework,Version=v4.5.AssemblyAttribute.cs
-/Users/jianqiaoyang/Desktop/p-org/P-Mono/Bld/Drops/Release/x86/Binaries/PVisualizer.exe.config
-/Users/jianqiaoyang/Desktop/p-org/P-Mono/Bld/Drops/Release/x86/Binaries/PVisualizer.exe.mdb
-/Users/jianqiaoyang/Desktop/p-org/P-Mono/Bld/Drops/Release/x86/Binaries/PVisualizer.exe
-/Users/jianqiaoyang/Desktop/p-org/P-Mono/Src/PVisualizer/obj/x86/Release/PVisualizer.exe
-/Users/jianqiaoyang/Desktop/p-org/P-Mono/Src/PVisualizer/obj/x86/Release/PVisualizer.exe.mdb
