@@ -1,6 +1,10 @@
 ﻿<Properties StartupItem="Src/PrtDist/Core/PrtDist.vcxproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Release|x86" />
-  <MonoDevelop.Ide.Workbench />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Dependencies/P/Src/Pc/InteractiveCommandLine/InteractiveCommandLine.cs">
+    <Files>
+      <File FileName="Dependencies/P/Src/Pc/InteractiveCommandLine/InteractiveCommandLine.cs" Line="127" Column="32" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
