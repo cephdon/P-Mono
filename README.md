@@ -4,10 +4,17 @@ Version of P tool chain for Linux/MacOS using Mono
 ## Installation
 Dependencies for this project for now are mono, P
 #### Dependencies
-  - First you need to install mono. You may find installation guide from the [Mono-project]( http://www.mono-project.com/docs/getting-started/install/, "Mono Project")
-  - Then you can clone this repo and fetch dependencies via git submodule 
+  - First you need to install mono. You may find installation guide from the [Mono-project]( http://www.mono-project.com/docs/getting-started/install/ "Mono Project")
+  - Then you can clone this repo
 ```{r, engine='bash', count_lines}
-  $ git clone git@github.com:p-org/P.git P-Mono
+  $ git clone git@github.com:p-org/P-Mono.git
+```
+or if you prefer https:
+```{r, engine='bash', count_lines}
+  $ git clone https://github.com/p-org/P-Mono.git
+```
+and fetch dependencies via git submodule
+```{r, engine='bash', count_lines}
   $ git submodule update --init --recursive
 ```
   - At the moment, the project needs to set *MONO_IOMAP* environment variable in order to build correctly on some Linux systems. You may consider add `export MONO_IOMAP=case` to your `bashrc`. You can get more info [here](http://www.mono-project.com/archived/porting_msbuild_projects_to_xbuild/)
