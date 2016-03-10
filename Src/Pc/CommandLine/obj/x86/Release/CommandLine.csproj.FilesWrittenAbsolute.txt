@@ -1,6 +1,0 @@
-/Users/jianqiaoyang/Desktop/p-org/P-Mono/Src/Pc/CommandLine/obj/x86/Release/.NETFramework,Version=v4.5.AssemblyAttribute.cs
-/Users/jianqiaoyang/Desktop/p-org/P-Mono/Bld/Drops/Release/x86/Binaries/Pc.exe.config
-/Users/jianqiaoyang/Desktop/p-org/P-Mono/Bld/Drops/Release/x86/Binaries/Pc.exe.mdb
-/Users/jianqiaoyang/Desktop/p-org/P-Mono/Bld/Drops/Release/x86/Binaries/Pc.exe
-/Users/jianqiaoyang/Desktop/p-org/P-Mono/Src/Pc/CommandLine/obj/x86/Release/Pc.exe
-/Users/jianqiaoyang/Desktop/p-org/P-Mono/Src/Pc/CommandLine/obj/x86/Release/Pc.exe.mdb
