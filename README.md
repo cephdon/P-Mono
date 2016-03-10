@@ -10,7 +10,7 @@ Dependencies for this project for now are mono, P
   $ git clone git@github.com:p-org/P.git P-Mono
   $ git submodule update --init --recursive
 ```
-  - At the moment, the project needs to set *MONO_IOMAP* enviroment variable in order to build correctly on some Linux systems. You may consider add `export MONO_IOMAP=case` to your `bashrc`. You can get more info [here](http://www.mono-project.com/archived/porting_msbuild_projects_to_xbuild/)
+  - At the moment, the project needs to set *MONO_IOMAP* environment variable in order to build correctly on some Linux systems. You may consider add `export MONO_IOMAP=case` to your `bashrc`. You can get more info [here](http://www.mono-project.com/archived/porting_msbuild_projects_to_xbuild/)
 
 #### Build
   - The project uses *xbuild*, a port of *msbuild* which is shipped along with mono. To build the *P-Mono* project, under the project root directory:
