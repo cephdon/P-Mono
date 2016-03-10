@@ -13,6 +13,7 @@ obj/
 *.so
 *.dylib
 *.dll
+*.dll.config
 
 # Fortran module files
 *.mod
@@ -25,6 +26,7 @@ obj/
 
 # Executables
 *.exe
+*.exe.config
 *.mdb
 *.out
 *.app
