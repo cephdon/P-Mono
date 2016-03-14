@@ -31,11 +31,11 @@ You may also consider add the above export command to your `bashrc`. You can get
 
 ## Usage
   - Once you have built the project, you should be able to find executables inside *Bld/Drop/*. You should find the P Compiler executable *Pc.exe* there. 
-  - You can now try running the P Compiler exectable with mono.
+  - You can now try running the P Compiler executable with mono.
 ```{r, engine='bash', count_lines}
   $ mono path_to_executable/Pc.exe
 ```
 
 ## Reference
 
-[Original P repo](github.com/p-org/P "P Github Page")
+[Original P repo](https://github.com/p-org/P "P Github Page")
