@@ -33,3 +33,6 @@ obj/
 
 # Monodevelop
 *.userprefs
+
+Bld/Drops
+

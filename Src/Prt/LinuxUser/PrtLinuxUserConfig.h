@@ -41,9 +41,10 @@ extern "C"{
 
 #include <stdlib.h>
 #include <crtdbg.h>
-#include "sal.h"
+#include <sal.h>
 #include <stddef.h>
 #include <stdio.h>
+#include "ext_compat.h"
 
 	//#define PrtMalloc(size) malloc(size)
 	//#define PrtCalloc(nmemb, size) calloc(nmemb, size)
@@ -53,13 +54,13 @@ extern "C"{
 
 #else
 
-#include "sal.h"
+#include <sal.h>
 #include <stddef.h>
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
 #include <pthread.h>
-
+#include "ext_compat.h"
 #endif
 
 #ifdef PRT_USE_IDL
