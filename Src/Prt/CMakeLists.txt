@@ -1,4 +1,4 @@
-cmake_minimum_required (VERSION 2.6)
+cmake_minimum_required (VERSION 2.8)
 
 project (Prt)
 
@@ -37,14 +37,15 @@ endif()
 
 if (NOT Win32)
 	if ("${CMAKE_CXX_COMPILER_ID}" STREQUAL "Clang")
-	  add_definitions( -DFORCEINLINE= )
+	  add_definitions( -DPRT_USE_CLANG)
 	elseif ("${CMAKE_CXX_COMPILER_ID}" STREQUAL "GNU")
-	  add_definitions( -DFORCEINLINE=__attribute__((always_inline)) )
+	  add_definitions( -DPRT_USE_GCC )
 	endif()
 endif()
 
-set( LIBRARY_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/../../Bld/Drops/PrtUser/ )
-set( LIBRARY_OUTPUT_INCLUDE_PATH ${LIBRARY_OUTPUT_PATH}/include/ )
+set( PrtUser_Output_PATH ${PROJECT_SOURCE_DIR}/../../Bld/Drops/PrtUser/)
+set( LIBRARY_OUTPUT_PATH ${PrtUser_Output_PATH}/lib/ )
+set( LIBRARY_OUTPUT_INCLUDE_PATH ${PrtUser_Output_PATH}/include/ )
 
 file ( GLOB API_SRC ${API_PATH}/*.c ${API_PATH}/*.h )
 file ( GLOB Core_SRC ${Core_PATH}/*.c ${Core_PATH}/*.h )

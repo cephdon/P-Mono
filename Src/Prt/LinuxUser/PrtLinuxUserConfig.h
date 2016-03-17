@@ -5,6 +5,14 @@
 #ifndef PRTCONFIG_LINUXUSER_H
 #define PRTCONFIG_LINUXUSER_H
 
+#if defined(PRT_USE_CLANG)
+#define FORCEINLINE __attribute__((always_inline))
+#elif defined(PRT_USE_GCC)
+#define FORCEINLINE inline __attribute__((always_inline))
+#else
+#define FORCEINLINE
+#endif
+
 #ifdef __cplusplus
 extern "C"{
 #endif
