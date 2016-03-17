@@ -1,4 +1,0 @@
-[submodule "Dependencies/P"]
-	path = Dependencies/P
-	url = https://github.com/p-org/P.git
-	branch = master
