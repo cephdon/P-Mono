@@ -40,4 +40,4 @@ elseif(LINUX OR MACOSX)
 endif()
 
 add_subdirectory ( Prt )
-# ADD_SUBDIRECTORY(PrtTest)
+add_subdirectory ( PrtTest )
