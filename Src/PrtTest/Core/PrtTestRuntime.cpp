@@ -3,7 +3,7 @@
 #include <assert.h>
 #include "Prt.h"
 #include "PrtExecution.h"
-#include "PrtLinuxUser.h"
+#include "PrtUser.h"
 #include "PrtTestRuntime.h"
 #include <vector>
 #include <random>
@@ -166,6 +166,8 @@ void scheduler_run(Machine_Scheduler_Fn *choose_machine)
             }
         }
         // from all machines, choose next to run
+        if (running_machines.size() == 0)
+            break;
         current_machine = choose_machine();
         scheduler_should_run = PRT_FALSE;
         current_machine->should_run = PRT_TRUE;
@@ -240,7 +242,7 @@ void _scheduler_run_entry(Scheduler_Task_Kind kind, ...)
     va_start(task_args, kind);
     scheduler_task_args = &task_args;
     scheduler_task_kind = kind;
-    scheduler_run(FIFO_Scheduler_Fn);
+    scheduler_run(LIFO_Scheduler_Fn);
     va_end(task_args);
 }
 
