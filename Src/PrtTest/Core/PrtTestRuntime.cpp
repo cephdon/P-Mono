@@ -248,21 +248,24 @@ void _scheduler_run_entry(Scheduler_Task_Kind kind, ...)
 
 void TestMain(PRT_PROGRAMDECL *program, PRT_UINT32 main_machine)
 {
-    PRT_DBG_START_MEM_BALANCED_REGION
+    while(true)
     {
-        PRT_PROCESS *process;
-        PRT_GUID processGuid;
-        PRT_VALUE *payload;
-        processGuid.data1 = 1;
-        processGuid.data2 = 0;
-        processGuid.data3 = 0;
-        processGuid.data4 = 0;
-        process = PrtStartProcess(processGuid, program, ErrorHandler, Log);
-        payload = PrtMkNullValue();
-        PRT_MACHINEINST *r; 
-        _scheduler_run_entry(SCHEDULER_MK_MACHINE, process, main_machine, payload, &r);
-        PrtFreeValue(payload);
-        PrtStopProcess(process);
+        PRT_DBG_START_MEM_BALANCED_REGION
+        {
+            PRT_PROCESS *process;
+            PRT_GUID processGuid;
+            PRT_VALUE *payload;
+            processGuid.data1 = 1;
+            processGuid.data2 = 0;
+            processGuid.data3 = 0;
+            processGuid.data4 = 0;
+            process = PrtStartProcess(processGuid, program, ErrorHandler, Log);
+            payload = PrtMkNullValue();
+            PRT_MACHINEINST *r; 
+            _scheduler_run_entry(SCHEDULER_MK_MACHINE, process, main_machine, payload, &r);
+            PrtFreeValue(payload);
+            PrtStopProcess(process);
+        }
+        PRT_DBG_END_MEM_BALANCED_REGION
     }
-    PRT_DBG_END_MEM_BALANCED_REGION
 }
