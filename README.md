@@ -15,7 +15,7 @@ or if you prefer https:
 ```
 and fetch dependencies via git submodule
 ```{r, engine='bash', count_lines}
-  $ git submodule update --init --recursive
+  $ git submodule update --init --recursive --remote
 ```
   - To avoid errors because of case-sensitive paths on some distribution of Linux systems, mono provides an option which is controlled by the *MONO_IOMAP* environment variable. You need to execute the following command to set the environment varibale before building 
 ```{r, engine='bash', count_lines}
